@@ -1,7 +1,10 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, X-Requested-With");
+
 include '../model/db.php';
 include '../controlles/regix.php';
-
 
 class API{
     public function get($para,$get_Db){
@@ -35,7 +38,7 @@ function Data($res){
     foreach($res  as $value){
     $article = array("FirstName" => $value['Fname'],
                 "LastName" => $value['Lname'],
-                "Age" => $value['Age'],
+                "Email" => $value['Email'],
                 "PhoneNumber" => $value['PhoneNumber'],
                 "Token" => $value['Token']);
                 array_push($arr_post['users'],$article);
@@ -52,7 +55,7 @@ function Use__Api($contentType,$method,$params){
         'data' => null,
     ];
     if($contentType ==='application/json'){
-            if($method == "get"){
+            if($method === "get"){
                 $data = $get_Api->$method($params,$get_Db);
                 $response['data'] = Data($data);
             }

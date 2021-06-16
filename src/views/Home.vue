@@ -1,10 +1,8 @@
 <template>
     <div class="home">
-        <h1>this is home page</h1>
+        <Inscription></Inscription>
     </div>
 </template>
-
-
 
 <script>
 export default {
@@ -15,3 +13,4 @@ export default {
     }
 }
 </script>
+

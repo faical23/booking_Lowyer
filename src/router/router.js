@@ -1,9 +1,13 @@
 import Vue from 'vue'
 import Home from '../views/Home.vue'
+import Inscription from '../components/inscription.vue'
+
 import VueRouter from 'vue-router'  //// import vue-router package
 
 
 Vue.component('MYhome',Home) 
+Vue.component('Inscription',Inscription) 
+
 
 
 

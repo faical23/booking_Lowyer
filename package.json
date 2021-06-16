@@ -11,7 +11,9 @@
     "start": "npm main.js"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "vue": "^2.5.11",
+    "vue-axios": "^3.2.4",
     "vue-router": "^3.5.1"
   },
   "browserslist": [
